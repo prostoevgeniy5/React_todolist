@@ -15,9 +15,7 @@ class App extends React.Component {
                 {title: "CSS", isDone: true, priority: "low"},
                 {title: "ReactJS", isDone: false, priority: "high"}
             ],
-            filterValue: "Active", 
-
-            countTasks: 4
+            filterValue: "All"
         }    
     }
 
@@ -58,7 +56,6 @@ class App extends React.Component {
                     <TodoListHeader className="todoList-header" 
                                     onAddTaskClick={this.onAddTaskClick} />
                     <TodoListTasks tasks={this.state.tasks} 
-                                    countTasks={this.state.countTasks}
                                     filterValue={this.state.filterValue}
                                     changeStatus={this.changeStatus}
                                     />
